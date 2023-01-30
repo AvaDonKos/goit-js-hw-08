@@ -1,6 +1,6 @@
 const refs = {
-  form: document.querySelector('.feedback-form')
-}
+  form: document.querySelector('.feedback-form'),
+};
 
 const STORAGE_KEY = 'feedback-form-state';
 
@@ -28,7 +28,7 @@ function initForm() {
   const initValues = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
   if (initValues) {
-    const {email, message} = refs.form.elements;
+    const { email, message } = refs.form.elements;
     email.value = initValues.email || '';
     message.value = initValues.message || '';
   }
